@@ -1,13 +1,11 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
+import Link from 'next/link'
 
-export default function RootLayout({
-    children,
-  }: {
-    children: ReactNode
-  }) {
-    return (
-      <html lang="en">
-        <body>{children}</body>
-      </html>
-    )
-  }
+export default function Page() {
+  return (
+    <>
+      <h1><Link href="/login">登录</Link></h1>
+
+    </>
+  )
+}

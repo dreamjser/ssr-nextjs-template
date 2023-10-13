@@ -1,5 +1,14 @@
-import React from 'react'
 
-export default function Page() {
-  return <h1>Hello, Next.js!</h1>
-}
+import React, { ReactNode } from 'react'
+
+export default function RootLayout({
+    children,
+  }: {
+    children: ReactNode
+  }) {
+    return (
+      <html lang="en">
+        <body>{children}</body>
+      </html>
+    )
+  }
