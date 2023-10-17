@@ -3,12 +3,20 @@ import React, { ReactNode } from 'react'
 
 export default function RootLayout({
     children,
+    header,
+    nav,
   }: {
-    children: ReactNode
+    children: ReactNode,
+    header: ReactNode,
+    nav: ReactNode
   }) {
     return (
       <html lang="en">
-        <body>{children}</body>
+        <body>
+          {header}
+          {nav}
+          {children}
+        </body>
       </html>
     )
   }
