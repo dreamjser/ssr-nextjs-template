@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1><Link href="/login">登录</Link></h1>
+      <h1 className="fs24"><Link href="/login">登录</Link></h1>
     </>
   )
 }

@@ -1,4 +1,5 @@
 
+import './global.css'
 import React, { ReactNode } from 'react'
 
 export default function RootLayout({
