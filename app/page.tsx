@@ -1,13 +1,12 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
-import { NavBar } from '../ui'
-
+import { NavBar, Pagination } from '../ui'
 const metadata: Metadata = {
   title: 'Next学习',
 }
 
 async function getData() {
-  const res = await fetch(`${process.env.BASE_URL}getHomeBanner`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}getHomeBanner`)
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')
@@ -25,6 +24,9 @@ export default async function Page() {
       <NavBar back={null}>首页</NavBar>
       <div className="home-banner">
         <img src={data.url} alt="home banner" />
+      </div>
+      <div>
+        <Pagination />
       </div>
       <h1 className="fs24"><Link href="/login">登录</Link></h1>
     </>
