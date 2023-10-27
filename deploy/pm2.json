@@ -1,11 +1,5 @@
 {
   "name": "nextjs",
   "script": "npm run build && npm start",
-  "instances": "2",
-  "env": {
-    "NODE_ENV": "development"
-  },
-  "env_production" : {
-    "NODE_ENV": "production"
-  }
+  "instances": "2"
 }
