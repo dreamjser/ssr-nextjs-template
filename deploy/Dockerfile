@@ -4,7 +4,8 @@ WORKDIR /nextjs
 
 # Bundle APP files
 COPY package*.json /nextjs/
-RUN npm i
+COPY deploy/pm2.json /nextjs/
+RUN npm i pnpm -g && pnpm i --ignore-scripts
 COPY . /nextjs/
 
-CMD [ "pm2-runtime", "start", "deploy/pm2.json" ]
+CMD [ "pm2-runtime", "start", "pm2.json" ]
